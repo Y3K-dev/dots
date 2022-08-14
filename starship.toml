@@ -1,0 +1,63 @@
+# https://starship.rs/
+# sh -c "$(curl -fsSL https://starship.rs/install.sh)"
+# mkdir -p ~/.config && touch ~/.config/starship.toml
+# nano ~/.bashrc
+# add `eval "$(starship init bash)"` add the end of the file
+
+format = """
+${custom.tztime} \
+$cmd_duration\
+$directory\
+${custom.sq_br_on}\
+$git_branch\
+$git_status\
+${custom.sq_br_off}\
+$line_break\
+$character"""
+
+add_newline = false
+
+[character]
+success_symbol = "[#](white)"
+error_symbol = "[#](red)"
+
+[custom.tztime]
+command = 'date +"%H:%M:%S"'
+when = "true"
+format = '[\[$symbol($output)\]](yellow)'
+
+[cmd_duration]
+min_time = 0
+format = '[\[$duration\]](white)'
+
+[directory]
+truncation_length = 100
+truncate_to_repo = false
+style = " white"
+format = '[\[$path\]]($style)[$read_only]($read_only_style) '
+
+[git_branch]
+symbol = "≡ "
+style = "blue"
+truncation_symbol = ""
+format = '[$branch $symbol]($style)'
+
+[git_status]
+conflicted = "!"
+ahead = '[↑$count ](red)'
+behind = '[↓$count ](red)'
+up_to_date = "≡"
+modified = '[~$count ](red)'
+staged = '[+$count ](red)'
+deleted = '[-$count ](red)'
+format = '[$conflicted$staged$modified$deleted$conflicted]($style)'
+
+[custom.sq_br_on]
+command = 'echo ['
+when = "true"
+format = '[$output](yellow)'
+
+[custom.sq_br_off]
+command = 'echo ]'
+when = "true"
+format = '[$output](yellow)'
