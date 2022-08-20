@@ -65,14 +65,9 @@ call plug#begin('~/.config/nvim/plugged')
 	" SNIPPETS
 	Plug 'L3MON4D3/LuaSnip'
 	Plug 'rafamadriz/friendly-snippets'
-
-	" LANGUAGE SUPPORT
-	Plug 'elixir-editors/vim-elixir'
 	
 	" COLORSCHEME	
 	Plug 'ayu-theme/ayu-vim'
-	Plug 'svrana/neosolarized.nvim'
-	Plug 'tjdevries/colorbuddy.nvim'
 
 	" STATUS LINE
 	Plug 'vim-airline/vim-airline'
@@ -90,8 +85,9 @@ call plug#end()
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#buffer_nr_show = 1
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme = "atomic"
 
 lua require('gitsigns').setup()
 
 " COLORSCHEME
-colorscheme neosolarized
+colorscheme ayu
