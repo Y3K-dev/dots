@@ -1,10 +1,15 @@
 set -U fish_greeting ""
 
+# sh ~/.config/rxfetch/rxfetch
+# cat /sys/class/power_supply/BAT0/capacity
+
 alias ls="exa -lah"
 alias c="clear"
-alias checkwifi="nmcli dev wifi"
-alias sn="shutdown now"
+alias rxfetch="sh ~/.config/rxfetch/rxfetch"
 alias vim="nvim"
+alias checkwifi="nmcli dev wifi"
+alias sl="ls"
+alias sn="shutdown now"
 alias search="nix-env -qa"
 alias list="nix-env -q"
 alias install="nix-env -iA"

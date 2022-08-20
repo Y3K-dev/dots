@@ -11,7 +11,6 @@ gaps outer 3
 
 
 bindsym $mod+d exec rofi -show drun
-bindsym $mod+x exec rofi -show filebrowser
 bindsym Print exec flameshot gui
 
 floating_modifier $mod
@@ -77,7 +76,7 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
-bindsym $mod+Return exec alacritty
+bindsym $mod+Return exec kitty 
 
 bindsym $mod+shift+q kill
 
@@ -146,7 +145,7 @@ exec_always xset -dpms
 exec_always xset s noblank
 exec_always picom --experimental-backends
 exec_always bash ~/.config/polybar/launch.sh
-exec_always feh --bg-fill ~/Downloads/wallpaper.jpg
+exec_always feh --bg-fill ~/Downloads/wallpaper.png
 
 set $darkbluetrans	#08052be6
 set $darkblue		#08052b

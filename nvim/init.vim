@@ -1,6 +1,7 @@
 " OPTIONS
 
 set number
+set list
 set relativenumber
 set autoindent
 set nowrap
@@ -31,6 +32,9 @@ au BufNewFile,BufRead *.es6 setf javascript
 
 
 nnoremap ;f <cmd>Telescope find_files theme=ivy<CR>
+nnoremap ;t :tabnext<Return><C-w>w
+nnoremap ;n :tabnew<Return><C-w>w
+nnoremap ;c :tabclose<Return><C-w>w
 nnoremap ss :split<Return><C-w>w
 nnoremap sv :vsplit<Return><C-w>w
 nnoremap <C-a> gg<S-v>G
@@ -47,6 +51,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'nvim-lua/popup.nvim'
 	Plug 'nvim-lua/plenary.nvim' 
 	Plug 'neovim/nvim-lspconfig'	
+	Plug 'cohama/lexima.vim' 
 	Plug 'nvim-treesitter/nvim-treesitter'
 	Plug 'kyazdani42/nvim-web-devicons'
 
@@ -66,17 +71,27 @@ call plug#begin('~/.config/nvim/plugged')
 	
 	" COLORSCHEME	
 	Plug 'ayu-theme/ayu-vim'
+	Plug 'svrana/neosolarized.nvim'
+	Plug 'tjdevries/colorbuddy.nvim'
 
 	" STATUS LINE
-	Plug 'nvim-lualine/lualine.nvim'
+	Plug 'vim-airline/vim-airline'
+	Plug 'vim-airline/vim-airline-themes'
+
+	" GIT
+	Plug 'lewis6991/gitsigns.nvim'
 
 	" FILE FINDER 
 	Plug 'nvim-telescope/telescope.nvim'
-	
-	" AUTO CLOSE
-	Plug 'cohama/lexima.vim' 
 
 call plug#end()
 
+" PLUGIN CONFIGURATION
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+let g:airline#extensions#tabline#enabled = 1
+
+lua require('gitsigns').setup()
+
 " COLORSCHEME
-colorscheme ayu 
+colorscheme neosolarized

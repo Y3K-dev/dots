@@ -6,7 +6,7 @@
 
 format = """
 ${custom.tztime} \
-$cmd_duration\
+${cmd_duration}\
 $directory\
 ${custom.sq_br_on}\
 $git_branch\
@@ -27,8 +27,9 @@ when = "true"
 format = '[\[$symbol($output)\]](yellow)'
 
 [cmd_duration]
-min_time = 0
-format = '[\[$duration\]](white)'
+command = 'cat /sys/class/power_supply/BAT0/capacity'
+when = "true"
+format = '[$output](white)'
 
 [directory]
 truncation_length = 100
