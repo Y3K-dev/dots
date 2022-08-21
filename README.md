@@ -1,3 +1,3 @@
 # Dotfiles for linux
 
-##### i3, neovim, fish, starship, rofi & alacritty
+##### fish, i3, kitty, neovim, rofi, tmux
