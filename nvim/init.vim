@@ -2,6 +2,7 @@
 
 set number
 set list
+set laststatus=0
 set relativenumber
 set autoindent
 set nowrap
@@ -70,8 +71,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'ayu-theme/ayu-vim'
 
 	" STATUS LINE
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
+	Plug 'kdheepak/tabline.nvim'
 
 	" GIT
 	Plug 'lewis6991/gitsigns.nvim'
@@ -82,10 +82,7 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 " PLUGIN CONFIGURATION
-let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#buffer_nr_show = 1
-let g:airline#extensions#tabline#enabled = 1
-let g:airline_theme = "atomic"
+autocmd VimEnter * hi TabLineFill guifg=#0f1419 guibg=#ffffff
 
 lua require('gitsigns').setup()
 
