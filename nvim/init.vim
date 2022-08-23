@@ -2,6 +2,7 @@
 
 set number
 set list
+set guifont=FiraCode\ Nerd\ Font:h16
 set laststatus=0
 set relativenumber
 set autoindent
