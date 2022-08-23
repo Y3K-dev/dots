@@ -71,7 +71,7 @@ call plug#begin('~/.config/nvim/plugged')
 	Plug 'ayu-theme/ayu-vim'
 
 	" STATUS LINE
-	Plug 'kdheepak/tabline.nvim'
+	Plug 'nvim-lualine/lualine.nvim'
 
 	" GIT
 	Plug 'lewis6991/gitsigns.nvim'
