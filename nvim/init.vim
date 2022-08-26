@@ -83,7 +83,6 @@ call plug#begin('~/.config/nvim/plugged')
 call plug#end()
 
 " PLUGIN CONFIGURATION
-autocmd VimEnter * hi TabLineFill guifg=#0f1419 guibg=#ffffff
 
 lua require('gitsigns').setup()
 
