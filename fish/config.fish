@@ -15,7 +15,7 @@ alias delete="nix-env -e"
 alias .="cd"
 alias vimc="cd ~/.config/nvim && nvim ~/.config/nvim/init.vim"
 
-sh ~/.config/rxfetch/rxfetch
+# sh ~/.config/rxfetch/rxfetch
 
 if status is-interactive
     # Commands to run in interactive sessions can go here
