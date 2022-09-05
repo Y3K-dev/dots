@@ -64,6 +64,10 @@ bindsym $mod+Shift+r restart
 bindsym XF86MonBrightnessUp exec --no-startup-id brightnessctl set +5% 
 bindsym XF86MonBrightnessDown exec --no-startup-id brightnessctl set 5%- 
 
+bindsym XF86AudioRaiseVolume exec "amixer -q sset Master 5%+"
+bindsym XF86AudioLowerVolume exec "amixer -q sset Master 5%-"
+bindsym XF86AudioMute exec "amixer -q sset Master,0 toggle"
+
 bindsym $mod+j focus left
 bindsym $mod+k focus down
 bindsym $mod+b focus up
