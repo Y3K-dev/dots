@@ -78,7 +78,8 @@ call plug#begin('~/.config/nvim/plugged')
 	" GIT
 	Plug 'lewis6991/gitsigns.nvim'
 
-	" FILE FINDER 
+	" FILE 
+	Plug 'kyazdani42/nvim-tree.lua'
 	Plug 'nvim-telescope/telescope.nvim'
 
 call plug#end()
