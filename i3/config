@@ -119,6 +119,7 @@ set $ws10 "10"
 assign [class="Pcmanfm"] $ws3
 
 exec_always xinput set-prop "ELAN1300:00 04F3:3104 Touchpad" "libinput Disable While Typing Enabled" 0
+exec_always autotiling
 exec_always xset s off
 exec_always xset -dpms
 exec_always xset s noblank

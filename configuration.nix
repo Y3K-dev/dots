@@ -28,7 +28,13 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-  
+
+  # Set your time zone.
+  time.timeZone = "Asia/Kolkata";
+
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_IN.utf8";
+
   fonts = {
      enableDefaultFonts = true;
 
@@ -106,6 +112,7 @@
     neovim
     wget
     brave
+    autotiling
     cmatrix
     feh
 
@@ -122,7 +129,7 @@
     unzip
     exa
     fish
-    htop
+    btop
     neofetch
     git
     killall 
