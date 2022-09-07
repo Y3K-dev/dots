@@ -28,10 +28,7 @@
 
   # Enable networking
   networking.networkmanager.enable = true;
-
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_IN.utf8";
-
+  
   fonts = {
      enableDefaultFonts = true;
 
