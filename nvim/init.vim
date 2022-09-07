@@ -70,6 +70,7 @@ call plug#begin('~/.config/nvim/plugged')
 	
 	" COLORSCHEME	
 	Plug 'ayu-theme/ayu-vim'
+	Plug 'vv9k/vim-github-dark'
 
 	" STATUS LINE
 	Plug 'nvim-lualine/lualine.nvim'
@@ -87,4 +88,4 @@ call plug#end()
 lua require('gitsigns').setup()
 
 " COLORSCHEME
-colorscheme ayu
+colorscheme ghdark
