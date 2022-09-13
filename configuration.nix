@@ -29,6 +29,12 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
+  # Set your time zone.
+  time.timeZone = "Asia/Kolkata";
+
+  # Select internationalisation properties.
+  i18n.defaultLocale = "en_IN.utf8";
+
   fonts = {
      enableDefaultFonts = true;
 
@@ -102,7 +108,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    kitty
+    alacritty
     neovim
     wget
     brave
