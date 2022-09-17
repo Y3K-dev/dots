@@ -125,7 +125,7 @@ exec_always xset -dpms
 exec_always xset s noblank
 exec_always picom --experimental-backends
 exec_always bash ~/.config/polybar/launch.sh
-exec_always feh --bg-fill ~/Downloads/wallpaper.png
+exec_always feh --bg-fill ~/Downloads/wall.jpg
 
 set $darkbluetrans	#08052be6
 set $darkblue		#08052b

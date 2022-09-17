@@ -117,6 +117,7 @@
 
     # global libraries [npm]
     pkgs.nodePackages."typescript"
+    pkgs.nodePackages."prisma"
     pkgs.nodePackages."typescript-language-server"
 
     pavucontrol
