@@ -220,30 +220,39 @@ draw_bold_text_with_bright_colors: true
 ##      START OF COLOR SCHEMES       ##
 #######################################
 schemes:
-  Vitesse: &Vitesse
+  NightOwl: &NightOwl
     primary:
-      background: '#131213'
-      foreground: '#dbd7ca'
-    normal:
-      black:   '#393a34'
-      red:     '#cb7676'
-      green:   '#4d9375'
-      yellow:  '#e6cc77'
-      blue:    '#6394bf'
-      magenta: '#db889a'
-      cyan:    '#5eaab5'
-      white:   '#ffffff'
-    bright:
-      black:   '#777777'
-      red:     '#cb7676'
-      green:   '#4d9375'
-      yellow:  '#e6cc77'
-      blue:    '#6394bf'   # This is 2257a0 in Doom Emacs but I lightened it.
-      magenta: '#db889a'
-      cyan:    '#5eaab5'
-      white:   '#ffffff'
+      background: '0x011627'
+      foreground: '0xd6deeb'
 
-colors: *Vitesse
+  # Colors the cursor will use if `custom_cursor_colors` is true
+    cursor:
+      text: '0xffffff'
+      cursor: '0x7e57c2'
+
+  # Normal colors
+    normal:
+      black:   '0x000000'
+      red:     '0xef5350'
+      green:   '0x22da6e'
+      yellow:  '0xaddb67'
+      blue:    '0x82aaff'
+      magenta: '0xc792ea'
+      cyan:    '0x21c7a8'
+      white:   '0xffffff'
+
+    # Bright colors
+    bright:
+      black:   '0x575656'
+      red:     '0xef5350'
+      green:   '0x22da6e'
+      yellow:  '0xffeb95'
+      blue:    '0x82aaff'
+      magenta: '0xc792ea'
+      cyan:    '0x7fdbca'
+      white:   '0xffffff'
+
+colors: *NightOwl
 
 #######################################
 ##       END OF COLOR SCHEMES        ##
